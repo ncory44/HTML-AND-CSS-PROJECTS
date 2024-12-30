@@ -1,33 +1,40 @@
 /*Import link for the Roboto font from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
+/*Import link for the Mukta font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
     background-color: white;
-    overflow-x: hidden; /*hides the bottom left right scroll bar
+    overflow-x: hidden;
+    /*hides the bottom left right scroll bar
     when elements stretch beyond the border*/
 }
 
 /*NAVBAR*/
 
-li{
+li {
     display: inline;
     padding: 5px;
 }
 
 a {
-    font-family: "Roboto", sans-serif; /*Font from fonts.google.com*/
+    font-family: "Roboto", sans-serif;
+    /*Font from fonts.google.com*/
     font-size: 20px;
     font-weight: 700;
     text-shadow: 1px .5px 4px rgba(46, 31, 31, .5);
     color: white;
-    text-decoration: none; /*Removes the default link styling*/
-  }
-
-a:hover{
-    color:#d7eaf7; /*Changes the color of the anchor element when the user hovers their mouse over it.*/
+    text-decoration: none;
+    /*Removes the default link styling*/
 }
 
-.nav-bar{
+a:hover {
+    color: #d7eaf7;
+    /*Changes the color of the anchor element when the user hovers their mouse over it.*/
+}
+
+.nav-bar {
     background-color: #216391;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -36,20 +43,110 @@ a:hover{
     margin-top: -8px;
     margin-left: -10px;
     margin-right: -10px;
-    position: sticky; /*Creates a sticky element that stays in
+    position: sticky;
+    /*Creates a sticky element that stays in
     the same spot in the browser screen*/
-    top: 0; /*Tells the browser to stick the element
+    top: 0;
+    /*Tells the browser to stick the element
     at the top of the page based on the user scrolling*/
 }
 
 /*Creates a line under the home and contact links to seperate them from the images links*/
-#nav-border{
+#nav-border {
     padding-bottom: 10px;
     border-bottom: 3px solid #ffffff;
 }
 
 /*HEADERS*/
-h1,h2,h3{
+h1,
+h2,
+h3 {
     color: #0a3f63;
     text-align: center;
+    font-family: "Mukta", serif;
+    /*Font from fonts.google.com*/
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.5);
+    margin: 0px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#contact-h3 {
+    text-shadow: none;
+}
+
+/*Creates a text color change animation on the h1 tags for the home and contact page headers*/
+@keyframes color-text {
+    0% {
+        color: #b1e5ff;
+    }
+
+    100% {
+        color: #0a3f63;
+    }
+}
+
+/*Calls the animation by its name in a css selector so it can be applied to a specific html element*/
+.animate-text {
+    animation: color-text 4s;
+}
+
+/*BODY CONTENT*/
+
+img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
+        0 6px 20px 0 rgba(0, 0, 0, 19);
+}
+
+.column {
+    float: left;
+    width: 48%;
+    /*Places the images side by side when the float property is used*/
+    padding: 10px;
+}
+
+/*Groups elements inside a div element together and forces
+any floating elements outside outside of the div under
+it with this class selector*/
+.container {
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px;
+    /*Passing will add an inline space 
+    so the elements don't sit on the edge of the di*/
+    padding-bottom: 10px;
+}
+
+/*This is part of the container class selector to format
+the elements to display in a table-like format*/
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Sets up the size of each div that holds an image so that
+the image can be centered*/
+.image-container {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
 }
