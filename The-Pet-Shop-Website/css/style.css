@@ -1,0 +1,55 @@
+/*Import link for the Roboto font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: white;
+    overflow-x: hidden; /*hides the bottom left right scroll bar
+    when elements stretch beyond the border*/
+}
+
+/*NAVBAR*/
+
+li{
+    display: inline;
+    padding: 5px;
+}
+
+a {
+    font-family: "Roboto", sans-serif; /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46, 31, 31, .5);
+    color: white;
+    text-decoration: none; /*Removes the default link styling*/
+  }
+
+a:hover{
+    color:#d7eaf7; /*Changes the color of the anchor element when the user hovers their mouse over it.*/
+}
+
+.nav-bar{
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*The following minus margins stretch the navbar background
+    beyond the web browser screen edge*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*Creates a sticky element that stays in
+    the same spot in the browser screen*/
+    top: 0; /*Tells the browser to stick the element
+    at the top of the page based on the user scrolling*/
+}
+
+/*Creates a line under the home and contact links to seperate them from the images links*/
+#nav-border{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/*HEADERS*/
+h1,h2,h3{
+    color: #0a3f63;
+    text-align: center;
+}
