@@ -49,6 +49,7 @@ a:hover {
     top: 0;
     /*Tells the browser to stick the element
     at the top of the page based on the user scrolling*/
+    z-index: 9; /*Sets the navbar in front of all images*/
 }
 
 /*Creates a line under the home and contact links to seperate them from the images links*/
@@ -149,4 +150,89 @@ the image can be centered*/
     width: 500px;
     margin: auto;
     margin-bottom: 50px;
+}
+
+/*Sets the background color in each div with an image
+and specifies which ones by the use of the id names for each image*/
+#cat{
+    background-color: #d7eaf7;
+}
+
+#dog{
+    background-color: #c3e0c5;
+}
+
+#rabbit{
+    background-color: #c3e0c5;
+}
+
+#guineapig{
+    background-color: #d7eaf7;
+}
+
+#fish{
+    background-color: #d7eaf7;
+}
+
+#reptile{
+    background-color: #c3e0c5;
+}
+
+/*Sets up the properties for the overlay on each image*/
+.overlay{
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+}
+
+
+/*The :hover pseudo-class triggers the overlay class
+to 60% opacity when a user hovers their mouse over an
+image*/
+.overlay:hover{
+    opacity: 0.6;
+}
+
+/*This selector tragets the video on the page*/
+iframe{
+    display: table;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+/*Styles the div element that holds the video*/
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px; /*padding will add an inline space
+    so the elements don't sit on the edge of the div*/
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #216391;
+    margin-top: 50px;
+    /*negative margins stretch the footer margin beyond the screen edge
+    on the left and right*/
+    margin-right: -10px;
+    margin-left: -10px;
+    bottom: 0; /*Positions the footer on the bottom of the screen*/
+}
+
+/*Styles the table elements within the footer tag*/
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    width: 33%;
 }
