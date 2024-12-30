@@ -234,5 +234,28 @@ table{
 
 td{
     text-align: center;
-    width: 33%;
+    width: 33%; /*We divide the three columns equally
+    so that they each take up a third of the width*/
+}
+
+/*Specifically styles the paragraph elements within the table elements*/
+td p{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/*FORM CSS*/
+form{
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+input{
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165,165,165)
 }
