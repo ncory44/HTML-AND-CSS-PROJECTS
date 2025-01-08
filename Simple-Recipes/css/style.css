@@ -1,6 +1,9 @@
 /*Import link for the Josefine Slab font*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/*Import link for the Sacremento font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 html{
     overflow-x: hidden; /*prevents the browser from
     displaying a right to left scroll bar*/
@@ -120,4 +123,72 @@ td p{
     font-weight: 600;
     text-align: center;
     color: rgb(247,177,188);
+}
+
+/*BODY*/
+
+.container{
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+/*HEADERs*/
+
+h1{
+    font-family: "Sacramento", serif; /*fonts.google.com*/
+    font-size: 80px;
+    color: rgb(0,80,67);
+    text-align: center;
+}
+
+h2, h3, h4{
+    font-family: 'Josefin Slab', serif; /*from fonts.google.com*/
+    text-align: center;
+}
+
+h2{
+    color: rgb(0,80,67);
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-color: rgb(247,177,188);
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/*PARAGRAPHS*/
+
+p{
+    font-family: 'Josefin Slab', serif;/*from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0,80,67);
+    text-align: center;
+}
+
+/*IMAGES*/
+
+/*Positions elements to sit side-by-side on the screen*/
+.column{
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+/*Specifically styles the first 7 img tag elements
+contained in elements with the .column text*/
+.column img:nth-child(-n+7){
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4),
+    0 6px 20px 0 rgba(0,0,0,0.2);
 }
