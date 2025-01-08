@@ -1,0 +1,51 @@
+/*Import link for the Josefine Slab font*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    overflow-x: hidden; /*prevents the browser from
+    displaying a right to left scroll bar*/
+}
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky; /*Creates a sticky element that
+    stays in the same spot in the browser screen*/
+    top: 0; /*Tells the browser to stick the element
+    at the top of the page based on user scrolling*/
+    z-index: 9; /*Sets the stack layer of the nav-bar
+    to scroll over other elements*/
+}
+
+ul{
+    display: flex; /*Creates a flex container which
+    will expand or shrink elements to fill the space
+    available to them and place elements side-by-side
+    horizontally*/
+    list-style-type: none; /*removes the default styling
+    for unordered list elements*/
+    align-items: center;
+    margin: -8px -8px 0px -8px; /*the margin order is
+    top, right, bottom, left. The negative margins will
+    stretch the borders beyond the screen*/
+    background-color: rgb(1,128,106);
+    border-bottom: 5px solid rgb(247, 177, 188);
+}
+
+a{
+    font-family: 'Josefin Slab', serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(247,177,188);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+
+a:hover{
+    background-color: rgb(149, 238, 223);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    transition: background-color 0.3s ease-in;
+}
