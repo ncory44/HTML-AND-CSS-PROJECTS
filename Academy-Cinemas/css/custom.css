@@ -1,5 +1,7 @@
 /*Font Passion One from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+/*Font Yesteryear from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 
 /*Creates global CSS variables that can be reused
 throughout the file*/
@@ -11,6 +13,7 @@ throughout the file*/
     --accent-color: rgb(36,36,36);
     --accent-text-color: rgb(255,255,255);
     --main-font-family: 'Passion One', cursive;
+    --secondary-font-family: "Yesteryear", serif;
 }
 
 body{
@@ -116,7 +119,7 @@ dropdown menu*/
 
 /*GENERAL STYLING*/
 
-h1,h3, p{
+h1,h3, h4, p{
     cursor: default; /*changes the curso back to the
     default arrow instead of a text cursor when hovering
     over text*/
@@ -135,6 +138,11 @@ h3{
     font-size: 50px;
 }
 
+h4{
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
 b{
     font-weight: 600;
 }
@@ -143,4 +151,32 @@ b{
 
 .container{
     padding: 100px;
+}
+
+/*BUTTONS*/
+
+/*Creates the main styling for buttons that contain
+the Bootstrap .btn class*/
+.btn{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+.btn:focus{
+    border-color: transparent; /*overrides bootstraps
+    dark border when the user clicks the button*/
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover{
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
 }
