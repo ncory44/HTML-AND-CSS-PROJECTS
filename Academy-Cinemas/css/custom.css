@@ -176,6 +176,11 @@ img{
     padding-top: 50px;
 }
 
+.col-lg-5 img{
+    height: 650px;
+    object-fit: cover;
+}
+
 /*BUTTONS*/
 
 /*Creates the main styling for buttons that contain
