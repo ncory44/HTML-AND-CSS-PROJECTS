@@ -1,0 +1,87 @@
+/*GENERAL*/
+
+html{
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image: url("css-img/flag2.webp");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.content-container{
+    margin-right: 15%;
+    margin-left: 15%;
+    z-index: 4;
+}
+
+img{
+    height: 540px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+/*NAVBAR*/
+
+.topnav{
+    background-color: #7b7485;
+    overflow: hidden;
+    margin: -5px -5px 18px -5px;
+}
+
+.topnav a{
+    float: left;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topnav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active{
+    background-color: #000080;
+    color: white;
+}
+
+/* INFO TILES STYLING */
+
+.info-tile{
+    width: 100%;
+    border-style: none;
+    box-shadow: 4px 5px 10px gray;
+    margin-bottom: 18px;
+    padding: 10px;
+    background-color: white;
+}
+
+.info-tile p{
+    text-align: justify;
+}
+
+.container{
+    display: table;
+    display: flex;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.box1, .box2{
+    display: table-cell;
+    width: 48%;
+    padding: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/*IMPACT*/
+
+#impact_para{
+    font-size: x-large;
+}
