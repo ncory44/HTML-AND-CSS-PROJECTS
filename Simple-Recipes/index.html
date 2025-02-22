@@ -522,17 +522,18 @@
                 <br>
                 Contact us below!
             </h3>
-            <form>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+            <div id="validateMsg"></div>
+            <form id="contactForm">
+                <input id="firstName" type="text" placeholder="First Name">
+                <input id="lastName" type="text" placeholder="Last Name">
                 <br>
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone Number">
+                <input id="email" type="email" placeholder="Email">
+                <input id="phone" type="tel" placeholder="Phone Number">
                 <br>
                 <input type="checkbox" id="subscription">
                 <label for="subscription">Susbscribe for weekly recipes!</label>
                 <br>
-                <textarea placeholder="Type message here..."></textarea>
+                <textarea id="message" placeholder="Type message here..."></textarea>
                 <br>
                 <input type="submit" value="Submit">
             </form>
