@@ -65,7 +65,7 @@
                 <div class="col-lg-5 mx-auto">
                     <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" 
                     data-bs-trigger="hover focus"
-                    data-bs-image="images/four-and-a-half-stars.png"
+                    data-bs-image="images/four-and-half-stars.png"
                     data-bs-title="Ben Hur Rating">
                     <img src="images/ben-hur.jpg" class="img-fluid" alt="Ben-Hur movie poster">
                     </span>
@@ -205,7 +205,7 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a movie</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Movie title selection">
+                            <select id="movieSelect" class="form-select" aria-label="Movie title selection">
                                 <option selected>Select movie</option>
                                 <option value="1">Ben-Hur</option>
                                 <option value="2">The Day the Earth Stood Still</option>
@@ -219,7 +219,7 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a show time</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Show time selection">
+                            <select id="timeSelect" class="form-select" aria-label="Show time selection">
                                 <option selected>Select time</option>
                                 <option value="1">10:00 AM</option>
                                 <option value="2">11:30 AM</option>
@@ -244,11 +244,21 @@
             <!--BUY TICKETS BUTTON-->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                    <button type="submit" class="btn yellow-btn" onclick="buyTickets()">Buy Tickets</button>
                 </div>
             </div>
         </div>
     </section>
+    <!--BOOTSTRAP TOAST-->
+    <div id="toastDisplay" class="custom-toast toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Ticket Info</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="toastBody" class="toast-body">
+          <!--Selected options will be diplayed here-->>
+        </div>
+      </div>
     <!--CONTACT FORM-->
     <section>
         <div class="container" id="contact">
