@@ -316,3 +316,9 @@ selector styling*/
     width: auto;
     height: 130px;
 }
+
+/*popovers*/
+
+.star-rating{
+    width: 80%;
+}

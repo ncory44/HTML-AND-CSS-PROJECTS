@@ -12,13 +12,10 @@
     CSS based on levels of specificity-->
     <link href="css/custom.css" rel="stylesheet">
     <!--Custom CSS for multiple screen sizes-->
-    <link href="css/custom-css-media.css" rel="stylesheet" </head>
+    <link href="css/custom-css-media.css" rel="stylesheet">
+</head>
 
 <body>
-    <!--BOOTSTRAP JAVASCRIPT-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
@@ -66,7 +63,12 @@
             <!--BEN HUR-->
             <div class="d-flex flex-row flex-wrap spacer" id="ben-hur">
                 <div class="col-lg-5 mx-auto">
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus"
+                    data-bs-image="images/four-and-a-half-stars.png"
+                    data-bs-title="Ben Hur Rating">
                     <img src="images/ben-hur.jpg" class="img-fluid" alt="Ben-Hur movie poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="card-body">
@@ -138,14 +140,24 @@
                     </div>
                 </div>
                 <div class="col-lg-5 mx-auto">
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus"
+                    data-bs-image="images/four-stars.png"
+                    data-bs-title="The Day the Earth Stood Still Rating">
                     <img src="images/earth-stood-still.jpg" class="img-fluid"
                         alt="The Day the Earth Stood Still movie poster">
+                    </span>
                 </div>
             </div>
             <!--VERTIGO-->
             <div class="d-flex flex-row flex-wrap spacer" id="vertigo">
                 <div class="col-lg-5 mx-auto">
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus"
+                    data-bs-image="images/four-and-half-stars.png"
+                    data-bs-title="Vertigo Rating">
                     <img src="images/vertigo.jpg" class="img-fluid" alt="Vertigo movie poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="card-body">
@@ -198,7 +210,7 @@
                                 <option value="1">Ben-Hur</option>
                                 <option value="2">The Day the Earth Stood Still</option>
                                 <option value="3">Vertigo</option>
-                              </select>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -215,7 +227,7 @@
                                 <option value="4">2:30 PM</option>
                                 <option value="5">4:50 PM</option>
                                 <option value="6">8:00 PM</option>
-                              </select>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -262,22 +274,29 @@
     <section>
         <div class="container-fluid">
             <footer class="d-flex flex-wrap justify-content-center align-items-center py-3">
-              <p class="col-md-4 mb-0 footer-text">&copy; Academy Cinemas</p>
-          
-              <img src="images/logo.png" class="col-md-4 footer-img" alt="Academy Cinemas logo">
-          
-              <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#now-playing" class="nav-link px-2 footer-text">Now Playing</a></li>
-                <li class="nav-item"><a href="#tickets" class="nav-link px-2 footer-text">Tickets</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link px-2 footer-text">Contact</a></li>
-              </ul>
-              <div class="row">
-                <div class="w-auto col footer-text">Bob Joe</div>
-                <div class="w-auto col footer-text">@billybobjoe</div>
-              </div>
+                <p class="col-md-4 mb-0 footer-text">&copy; Academy Cinemas</p>
+
+                <img src="images/logo.png" class="col-md-4 footer-img" alt="Academy Cinemas logo">
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#now-playing" class="nav-link px-2 footer-text">Now Playing</a></li>
+                    <li class="nav-item"><a href="#tickets" class="nav-link px-2 footer-text">Tickets</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link px-2 footer-text">Contact</a></li>
+                </ul>
+                <div class="row">
+                    <div class="w-auto col footer-text">Bob Joe</div>
+                    <div class="w-auto col footer-text">@billybobjoe</div>
+                </div>
             </footer>
-          </div>
+        </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
