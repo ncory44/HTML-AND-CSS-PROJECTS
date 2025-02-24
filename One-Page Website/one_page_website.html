@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="Nathan's Favorite Motorcycles" content="A collection of Nathan's dream motorcycles">
     <link rel="stylesheet" href="css/one_page_website.css">
+    <script src="JS/one_page_website.js" defer></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <nav class="nav-bar">
         <ul>
             <li class="drop"><a href="Motorcycles">Motorcycles</a>
-                <div class="rollover-menu"> 
+                <div class="rollover-menu">
                     <a href="#rninet">R NineT</a>
                     <a href="#ducatisport">Ducati Sport Classic 1000</a>
                     <a href="#aprilia">Aprilia RS660</a>
@@ -45,6 +46,71 @@
             <div id="aprilia">
                 <h3>Aprilia RS660</h3>
                 <img src="images/ApriliaRS660.png" alt="Image of Aprilia RS660">
+            </div>
+        </div>
+    </section>
+    <!--HONORABLE MENTION-->
+    <section>
+        <h3>Honorable Mentions:</h3>
+        <div class="row">
+            <div class="column">
+                <img src="images/honorable_mention/cb650.avif" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/honorable_mention/MGv7.webp" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/honorable_mention/svartpilen.webp" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="images/honorable_mention/thruxton.png" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow">
+            </div>
+        </div>
+
+        <!--MODAL LIGHTBOX-->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numberText">1 / 4</div>
+                    <img src="images/honorable_mention/cb650.avif" style="width: 50%;">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">2 / 4</div>
+                    <img src="images/honorable_mention/MGv7.webp" style="width: 50%;">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">3 / 4</div>
+                    <img src="images/honorable_mention/svartpilen.webp" style="width: 50%;">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">4 / 4</div>
+                    <img src="images/honorable_mention/thruxton.png" style="width: 50%;">
+                </div>
+
+                <!--NEXT/PREVIOUS CONTROLS-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!--CAPTION TEXT-->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- THUMBNAIL IMAGE CONTROLS -->
+                <div class="thumbnail-row">
+                    <img class="demo" src="images/honorable_mention/cb650.avif" onclick="currentSlide(1)" alt="cb650">
+                    <img class="demo" src="images/honorable_mention/MGv7.webp" onclick="currentSlide(2)"
+                        alt="moto guzzi v7">
+                    <img class="demo" src="images/honorable_mention/svartpilen.webp" onclick="currentSlide(3)"
+                        alt="svartpilen 801">
+                    <img class="demo" src="images/honorable_mention/thruxton.png" onclick="currentSlide(4)"
+                        alt="triumph thruxton">
+                </div>
             </div>
         </div>
     </section>

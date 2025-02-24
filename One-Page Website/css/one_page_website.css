@@ -96,3 +96,213 @@ form input{
     border: black;
     border-radius: 20px;
 }
+
+/*lightbox*/
+
+/*thumbnail row*/
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.thumbnail-row img.demo {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.thumbnail-row img.demo:hover,
+.thumbnail-row img.demo.active {
+    opacity: 1;
+}
+
+.row {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    margin: 0;
+    padding: 5px;
+    flex: 1; 
+    text-align: center; 
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row .column img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*create four equal columns that floats next to each other*/
+.column {
+    float: left;
+    width: 25%;
+}
+
+/*modal background*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Make the lightbox background black */
+.modal-content {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.modal-content img {
+    display: block;
+    margin: 10px auto; 
+    max-width: 80%; 
+    height: 400px;
+    height: auto;
+}
+
+.modal-content .column {
+    float: none; 
+    width: auto; 
+}
+
+.modal-content .mySlides img {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+
+/*close button*/
+.close {
+    color: white; 
+    position: absolute;
+    top: 20px; 
+    right: 30px; 
+    font-size: 50px; 
+    font-weight: bold;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+.close:hover, .close:focus {
+    color: #ff0000; 
+    text-decoration: none;
+}
+
+.numberText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/*hides slides*/
+.mySlides{
+    display: none;
+}
+
+/*next prev buttons*/
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/*position the next button to the right*/
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*adds a see through black background on hover*/
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*slide number text*/
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /*caption text*/
+  .caption-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+.caption-container img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+}
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active, .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
