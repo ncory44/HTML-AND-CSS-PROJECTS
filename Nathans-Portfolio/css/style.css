@@ -2,7 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+/***** ANIMATIONS *****/
+/*contact bounce animation*/
+@keyframes bounce{
+    0% {transform: translateY(0); }
+    50% {transform: translateY(-20px); }
+    100% {transform: translateY(0);}
+}
+
+/*background vid zoom in and out*/
+@keyframes zoomInOut{
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.05, 1.05);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
 /***** GENERAL STYLING *****/
+/*html*/
+html{
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
     margin: 0%  /*Displays all the way to the edge of the screen*/
@@ -172,6 +198,8 @@ footer {
     bottom: 0;
     min-width: 100%;
     z-index: -1;
+    animation: zoomInOut 15s ease-in-out infinite;
+    transform: translateZ(0);
 }
 
 /* screens that are 576px and smaller will not display the background video */
@@ -202,7 +230,19 @@ footer {
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
-} 
+}
+
+/*about styling*/
+#About {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Moves down initially */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#About.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .Column_1 {
     float: left;
@@ -245,21 +285,21 @@ footer {
 
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
-input[type=text] {
-    width: 100%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid #ccc; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
-    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
+input[type=text], input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
 /* Hover effects for input boxes */
-input[type=text]:hover {
-    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+input[type=text]:hover, input[type=tel]:hover {
+    box-shadow: 0 0 5px #00004d inset;
 }
 
 /* Submit button */
@@ -293,3 +333,70 @@ form {
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
+
+/*Popup styling*/
+
+/*container*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/*content*/
+.popup-content {
+    background-color: #f2f2f2;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*close button*/
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    color: #000080;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color: #d7005c;
+}
+
+/*popup heading*/
+.popup-content h2 {
+    margin-top: 0;
+    color: #000080;
+    font-family: "Black Han Sans", serif;
+    text-align: center;
+}
+
+/*contact button*/
+.contact-btn{
+    background-color: #000080;
+    color: #f9f871;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Syne", serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.contact-btn:hover{
+    background-color: #940074;
+    transform: scale(1.05);
+}
