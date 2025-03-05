@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <!--Head-->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
@@ -11,15 +10,14 @@
 </head>
 
 <!--Body-->
-
 <body class="Background">
-
+    
     <!--Navbar-->
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <a href="#Home" onclick="openForm()">Contact</a> <!-- Added back for consistency with reference -->
     </div>
 
     <!--Breaks inserted to add space between navbar and the first heading-->
@@ -35,15 +33,14 @@
         </video>
     </div>
 
-    <!--Video text-->
+    <!--Video text (expanded to cover full page initially, no button)-->
     <div class="Video_Text">
         <h1 style="font-size:6vw;" class="yellow-text">Nathan's Portfolio</h1>
         <strong>
             <p class="center">
                 <q>Hello, World</q>
                 <br>
-                <br> My name is Nathan. Welcome to my portfolio website. On it, I will tell you about my background and
-                experience.
+                <br> My name is Nathan. Welcome to my portfolio website. On it, I will tell you about my background and experience.
                 <br>
                 <br> Thank you for stopping by and enjoy!
             </p>
@@ -61,15 +58,11 @@
             <h1>About</h1>
             <hr>
             <p>
-                I am a software developer who loves to code! I fell in love with coding playing games, and wanting to
-                get to know what was going on behind the scenes.
+                I am a software developer who loves to code! I fell in love with coding playing games, and wanting to get to know what was going on behind the scenes.
                 <br>
-                <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
-                    Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and
-                programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
                 <br>
-                <br>I am a full-stack developer and would love to work with you on your project. <a
-                    href="#Contact">Contact</a> me below!
+                <br>I am a full-stack developer and would love to work with you on your project. <a href="#Home" onclick="openForm()">Contact</a> me below!
             </p>
         </div>
     </div>
@@ -87,31 +80,14 @@
         </div>
         <!--Right column-->
         <div class="Column_2">
-            <a href="hhttps://github.com/ncory44" target="_blank"><img src="images/githublogo.png"
-                    alt="GitHub Logo"></a>
+            <a href="https://github.com/ncory44" target="_blank"><img src="images/githublogo.png" alt="GitHub Logo"></a>
         </div>
     </div>
 
-    <!-- Contact section -->
-    <div class="Row" id="Contact">
-        <!-- Left column (image stays) -->
-        <div class="Column_2 Column_tall">
-            <img src="images/letter.jpg" alt="Contact_Image">
-        </div>
-        <!-- Right column (button replaces form) -->
-        <div class="Column_1 Column_tall">
-            <h1>Contact</h1>
-            <p class="center">
-                Want to get in touch?
-                <button id="openPopupBtn" class="contact-btn">Click Here</button>
-            </p>
-        </div>
-    </div>
-
-    <!--Popup Form-->
+    <!--Popup Form (unchanged)-->
     <div id="contactPopup" class="popup">
         <div class="popup-content">
-            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <span id="closePopupBtn" class="close-btn">×</span>
             <h2>Contact Me</h2>
             <form action="" method="POST" id="contactForm">
                 <label>Name:</label>
@@ -127,13 +103,12 @@
         </div>
     </div>
 
+    <!--Fixed Contact Button (like reference’s CONTACT)-->
+    <button id="openPopupBtn" class="contact-btn">Contact Me</button>
+
     <!--Footer section-->
     <footer>
-        <p>
         <p class="center">@nateforgets</p>
-        <br>
-        </p>
     </footer>
 </body>
-
 </html>
