@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /***** ANIMATIONS *****/
 /*contact bounce animation*/
@@ -414,4 +415,65 @@ form {
     background-color: #940074;
     color: black; 
     transform: scale(1.05);
+}
+
+.Column_2 img {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#Projects {
+    display: block;
+    overflow: hidden;
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2em 0;
+    clear: both;
+}
+
+#Projects:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#Projects .Column_1,
+#Projects .Column_2 {
+    height: 100%;
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    padding-top: 3%;
+}
+
+#Projects h1{
+    text-transform: uppercase;
+    font-family: "VT323", monospace;
+    font-size: 50px;
+    text-align: center; /* Centering all h1 elements */
+    margin-top: 3%; /* Adds a small margin above h1 elements */
+    color: #2cac05;
+    transition: transform .5s ease-in-out;
+    transform: scale(1);
+}
+
+
+#Projects p {
+    color: #f2f2f2;
+}
+#Projects img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#DevLog {
+    background-color: #f2f2f2;
+}
+
+#DevLog p {
+    color: #000;
 }

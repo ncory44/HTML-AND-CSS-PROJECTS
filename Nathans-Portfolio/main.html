@@ -17,6 +17,7 @@
         <a class="active" href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
+        <a href="#Projects">Current Project</a>
         <a href="#Home" onclick="openForm()">Contact</a> <!-- Added back for consistency with reference -->
     </div>
 
@@ -84,7 +85,42 @@
         </div>
     </div>
 
-    <!--Popup Form (unchanged)-->
+        <!-- Projects section -->
+    <div class="Row" id="Projects">
+        <!-- IMAGE ON LEFT -->
+        <div class="Column_2">
+            <img src="images/mainRoomSprite.png" alt="Nuclear Reactor Game Concept">
+        </div>
+        <!-- TEXT ON RIGHT -->
+        <div class="Column_1">
+            <h1>Nuclear Control</h1>
+            <p>
+                A systems-driven simulation inspired by real-world nuclear operations.
+                <br><br>
+                Monitor reactor status, reroute energy, and survive failure scenarios as a lone technician left behind.
+                <br><br><em>Systems Used:</em> C#, Unity, Aseprite
+            </p>
+        </div>
+    </div>
+
+    <!-- Dev Log section -->
+<div class="Row" id="DevLog">
+    <div class="Column_2">
+        <h1>Dev Log</h1>
+        <p>
+            • Added a functioning UI readout for reactor core temperature<br>
+            • Implemented power routing minigame using Unity UI<br>
+            • Researching real meltdown scenarios for better accuracy
+        </p>
+    </div>
+    <div class="Column_1">
+        <img src="images/mutusconcept.png" alt="Console UI Sketch">
+    </div>
+</div>
+
+
+
+    <!--Popup Form-->
     <div id="contactPopup" class="popup">
         <div class="popup-content">
             <span id="closePopupBtn" class="close-btn">×</span>
@@ -103,7 +139,7 @@
         </div>
     </div>
 
-    <!--Fixed Contact Button (like reference’s CONTACT)-->
+    <!--Fixed Contact Button-->
     <button id="openPopupBtn" class="contact-btn">Contact Me</button>
 
     <!--Footer section-->
